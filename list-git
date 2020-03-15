@@ -1,0 +1,20 @@
+20200315
+git add .
+git commit -m "msg"
+git push
+
+git log --oneline	#操作历史
+git reflog		#所有操作清单编号
+git rest HEAD/ID	#跳转到
+
+
+git checkout .	#暂存区cp到本地，注意本地未上传的将消失
+git checkout -- 	#同上
+git rm --cached	#会直接从暂存区删除文件，工作区则不做出改变
+git checkout HEAD .  #会用 HEAD 指向的 master 分支中的全部或者部分文件替换暂存区和以及工作区中的文件
+git reset HEAD	   #暂存区的目录树会被重写，被 master 分支指向的目录树所替换，但是工作区不受影响  
+
+git checkout -b feature_x 	#创建一个叫做"feature_x"的分支，并切换过去
+git checkout master	#切换回主分支
+git branch -d feature_x	#把新建的分支删掉
+git push origin feature_x	#分支推送到远端仓库，不然该分支就是 不为他人所见的：
